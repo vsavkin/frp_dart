@@ -1,0 +1,3 @@
+name: frp
+dependencies:
+  browser: any

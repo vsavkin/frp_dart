@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    .hide {
+      display: none;
+    }
+
+  </style>
+</head>
+<body>
+
+<h1>Sing Up</h1>
+
+<form>
+  <p>Login <input name="login" type="text"/><span class="hide" id="valid-login">OK</span></p>
+  <p>Password <input name="password" type="text"/></p>
+  <p>Confirmation <input name="confirmation" type="text"/><span class="hide" id="valid-password">OK</span></p>
+  <p><input type="button" value="Submit" disabled="disabled"/></p>
+</form>
+
+<script src="packages/browser/dart.js"></script>
+<script type="application/dart" src="app.dart"></script>
+
+</body>
+</html>
