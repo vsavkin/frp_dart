@@ -1,6 +1,6 @@
 # Functional Reactive Programming in Dart
 
-Functional reactive programming is a paradigm for modeling interactions in a reactive style. It enables rich composition and allows the testability of complex interactions. Sean Kirby and I put together a small library prototype (which is available at: [https://github.com/vsavkin/frp_dart](https://github.com/vsavkin/frp_dart)) to show how this paradigm can be used in Dart. 
+Functional reactive programming is a paradigm for modeling interactions in a reactive style. It enables rich composition and allows the testability of complex interactions. Sean Kirby and I put together this small library prototype to show how this paradigm can be used in Dart.
 
 
 ## What is Functional Reactive Programming?
@@ -80,9 +80,9 @@ There is a bunch of combinators that will be used in pretty much any interaction
 
 Now, having gone through the basics of functional reactive programming, let’s see how we can it for modeling a simple interaction.
 
-Suppose we have a sing up form.
+Suppose we have a sign up form.
 
-SCREENSHOT
+![Sign Up Form](http://24.media.tumblr.com/c0e3c0b3bba52c62f4c4eaf55a569ffe/tumblr_mor5cdArIV1qc0howo1_400.png)
 
 We would like to enable the button when the login field is present, the password field is present, and the password and confirmation fields match. 
 
@@ -103,7 +103,7 @@ Second, import the frp library.
 
 Next, implement the interaction itself.
 
-		singUpInteraction(SignUpForm form){
+		signUpInteraction(SignUpForm form){
 		  var password = _.fromStream("", form.passwordFieldValues);
 		  var passwordPresent = password.derive(isPresent);
 
@@ -133,7 +133,7 @@ Finally, we need to instantiate the form and call the interaction.
 		}
 
 		main(){
-		  singUpInteraction(new DomSignUpForm(query("form")));
+		  signUpInteraction(new DomSignUpForm(query("form")));
 		}
 
 

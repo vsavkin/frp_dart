@@ -12,7 +12,7 @@ abstract class SignUpForm {
   void toggleButton(bool enabled);
 }
 
-singUpInteraction(SignUpForm form){
+signUpInteraction(SignUpForm form){
   var password = _.fromStream("", form.passwordFieldValues);
   var passwordPresent = password.derive(isPresent);
 

@@ -1,7 +1,7 @@
 library frp_production;
 
 import 'dart:html';
-import 'sing_up_interaction.dart';
+import 'sign_up_interaction.dart';
 
 class DomSignUpForm implements SignUpForm {
   Element form;
@@ -16,5 +16,5 @@ class DomSignUpForm implements SignUpForm {
 }
 
 main(){
-  singUpInteraction(new DomSignUpForm(query("form")));
+  signUpInteraction(new DomSignUpForm(query("form")));
 }
